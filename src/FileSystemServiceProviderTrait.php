@@ -8,11 +8,32 @@
 
 namespace SKoziel\Silex\Filesystem;
 
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
+use Symfony\Component\Filesystem\Exception\IOException;
 use Traversable;
 use Symfony\Component\Filesystem\Filesystem;
 
 trait FileSystemServiceProviderTrait
 {
+    /**
+     * Copies a file.
+     *
+     * If the target file is older than the origin file, it's always overwritten.
+     * If the target file is newer, it is overwritten only when the
+     * $overwriteNewerFiles option is set to true.
+     *
+     * @param string $originFile          The original filename
+     * @param string $targetFile          The target filename
+     * @param bool   $overwriteNewerFiles If true, target files newer than origin files are overwritten
+     *
+     * @throws FileNotFoundException When originFile doesn't exist
+     * @throws IOException           When copy fails
+     */
+    public function copy($originFile, $targetFile, $overwriteNewerFiles = false)
+    {
+        return $this['filesystem']->copy($originFile, $targetFile, $overwriteNewerFiles);
+    }
+
     /**
      * @param string|array|Traversable $dirs
      * @param int $mode
