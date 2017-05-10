@@ -18,8 +18,4 @@ class FileSystemServiceProvider implements ServiceProviderInterface
     {
         $app['filesystem'] = new Filesystem();
     }
-
-    public function boot(Container $app)
-    {
-    }
 }

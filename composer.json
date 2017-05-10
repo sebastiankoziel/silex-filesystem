@@ -2,7 +2,7 @@
   "name": "skoziel/silex-filesystem",
   "type": "library",
   "license": "MIT",
-  "description": "The Filesystem Service Provider for Silex 2.0",
+  "description": "The Symfony Filesystem Service Provider for Silex 2.0",
   "keywords": [
     "silex",
     "filesystem",
@@ -10,7 +10,7 @@
   ],
   "authors": [
     {
-      "name": "Sebastian Koziel",
+      "name": "Sebastian Kozieł",
       "email": "contact@sebastiankoziel.pl"
     }
   ],
