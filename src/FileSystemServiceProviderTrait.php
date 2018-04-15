@@ -5,7 +5,6 @@
  * Date: 06.12.2016
  * Time: 14:11
  */
-
 namespace SKoziel\Silex\Filesystem;
 
 use Symfony\Component\Filesystem\Filesystem;

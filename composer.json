@@ -14,8 +14,12 @@
       "email": "contact@sebastiankoziel.pl"
     }
   ],
+  "config": {
+    "platform": {
+      "php": "7.0.25"
+    }
+  },
   "require": {
-    "php": ">=5.6",
     "symfony/filesystem": "~3.0",
     "silex/silex": ">=2.0"
   },
